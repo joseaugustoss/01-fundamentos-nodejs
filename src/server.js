@@ -16,9 +16,9 @@ const server = http.createServer((req, res) => {
       name: "José Augusto",
       email: "joseaugusto0408@gmail.com",
     });
-    return res.end(`Criação de usuário`);
+    return res.writeHead(201).end();
   }
-  return res.end("Hello World - Rocketseat!!");
+  return res.writeHead(401).end();
 });
 
 server.listen(3333);
